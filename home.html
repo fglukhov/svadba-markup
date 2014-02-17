@@ -1,0 +1,965 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Свадьба в усадьбе</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/cssreset-min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/cssfonts-min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.4.custom.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="js/masked.input.js"></script>
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="top-wrap">
+
+  <div class="top-main">
+    
+    <div class="header">
+      <div class="header-top">
+        <div class="center-wrapper">
+      		<div class="fc">
+      			<div class="site-ttl">
+              <div class="ttl">
+                Свадебные банкеты<br />
+                на самых торжественных<br />
+                площадках
+              </div>
+              <span>
+                Москвы и Московской области
+              </span>
+            </div>
+      			<div class="logo">
+              <img src="images/logo.png" alt="Cardinale Catering"/>
+            </div>
+      			<div class="header-phone">
+              <div class="header-callback">
+              	<span class="callback-button" onclick="openPopup('callbackPopup')">Заказать звонок</span>
+              </div>
+              <div class="header-phone-phone">
+                <span class="phone"><span>+7 (495)</span> 665-52-39</span>
+              </div>
+      				<div class="button" onclick="openPopup('orderPopup')">Заказать кейтеринг</div>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+      
+      <div class="main-menu-wrapper fc">
+        <div class="center-wrapper">
+          <ul class="main-menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог площадок</a></li>
+            <li><a href="#">Партнетры</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="body">
+      
+      <div class="main-slider">
+        <div class="slides">
+          <div class="slide">
+            <div class="pic" style="background-image:url(files/slide-1.jpg)"></div>
+            <div class="descr">
+              <h3><span>Петровский путевой дворец</span></h3>
+              <p>Уникальный исторический особняк рядом с ценром с обособленной территорией, Уникальный исторический особняк рядом</p>
+              <div class="price"><span>от <b>350 000</b> руб.</span></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="pic" style="background-image:url(files/slide-2.jpg)"></div>
+            <div class="descr">
+              <h3><span>Усадба Кусково</span></h3>
+              <p>Уникальный исторический особняк рядом Уникальный исторический особняк рядом Уникальный исторический особняк рядом </p>
+              <div class="price"><span>от <b>50 000</b> руб.</span></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="pic" style="background-image:url(files/slide-3.jpg)"></div>
+            <div class="descr">
+              <h3><span>Усадьба Архангельское</span></h3>
+              <p>Уникальный исторический особняк исторический особняк исторический особняк исторический особняк исторический особняк рядом Уникальный исторический особняк рядом Уникальный исторический особняк рядом </p>
+              <div class="price"><span>от <b>1 350 000</b> руб.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="lister fc">
+          <div class="lister-cont-wrapper">
+            <div class="lister-cont">
+              <div class="lister-descr"></div>
+            </div>
+          </div>
+          <div class="prev"></div>
+          <div class="next"></div>
+        </div>
+      </div>
+      
+      <div class="block-title">
+        <div class="center-wrapper">
+          <div class="svadba-title">
+            <h2>«Свадьба в Усадьбе»</h2>
+            <div class="text">
+              Это уникальный сервис по подбору и бронированию самых торжественных площадок<br />
+              Москвы и Московской области для организации свадебных банкетов
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="block-prices">
+      	<div class="center-wrapper">
+      	  <h2>Из чего складывается стоимость торжественной свадьбы на уникальной площадке</h2>
+      	  <div class="prices-cols fc">
+      	    <div class="prices-item prices-item-1">
+      	      <div class="pic"><img src="images/prices-pic-1.png"/></div>
+      	      <h3>аренда площадки</h3>
+      	      <div class="text">
+      	        <p>Обычно аренда варьируется<br /><b>от 70 до 350 тыс. руб.</b> в зависимости от уровня площадки и даты мероприятия. Стоимость площадки на конкретную дату вы можете посмотреть<br /><a href="#">в нашем каталоге</a></p>
+      	      </div>
+      	    </div>
+      	    <div class="prices-item prices-item-2">
+      	      <div class="pic"><img src="images/prices-pic-2.png"/></div>
+      	      <h3>стоимость меню</h3>
+      	      <div class="text">
+      	        <p>Стоимость меню составляет <b><a class="u-link anchor-link" href="#banket">от 3500 руб. до 5500 руб.</a></b>  на одного гостя, включая обслуживания. Алкоголь заказчика мы всегда обслуживаем без доплаты.</p>
+      	      </div>
+      	    </div>
+      	    <div class="prices-item prices-item-3">
+      	      <div class="pic"><img src="images/prices-pic-3.png"/></div>
+      	      <h3>опции на выбор</h3>
+      	      <div class="text">
+      	        <p>Например коктейль на встречу гостей или Сладкий стол. За более подробным списком опций обращайтесь к нашим менеджерам.</p>
+      	      </div>
+      	    </div>
+      	  </div>
+      	</div>
+      </div>
+      
+      <div class="block-pros">
+        <div class="center-wrapper">
+          <h2><span>более 800 пар выбрали нас</span></h2>
+          <h3>за последние 5 лет</h3>
+          <div class="pros-cols fc">
+            <div class="pros-item pros-item-bottom">
+              <div class="pic">
+                <img src="images/ico-pros-7.png" />
+              </div>
+              <div class="descr">
+                <h3>Множество видов<br />накрытий и сервировок</h3>
+                <p>Огромный выбор накрытий и сервировки<br />для создания уникальных свадебных торжеств</p>
+              </div>
+            </div>
+            <div class="pros-col-l">
+              <div class="pros-item">
+                <div class="pic">
+                  <img src="images/ico-pros-1.png" />
+                </div>
+                <div class="descr">
+                  <h3>Свадьба во дворце<br />не только для миллионеров</h3>
+                  <p>Мы предлагаем уникальные<br /> сочетания цены и ценности<br />для вашего торжества.</p>
+                </div>
+              </div>
+              <div class="pros-item">
+                <div class="pic">
+                  <img src="images/ico-pros-2.png" />
+                </div>
+                <div class="descr">
+                  <h3>Банкетная служба<br />высокого уровня</h3>
+                  <p>обеспечивает наши<br />мероприятия высоким уровнем<br />кухни и обслуживания.</p>
+                </div>
+              </div>
+              <div class="pros-item">
+                <div class="pic">
+                  <img src="images/ico-pros-3.png" />
+                </div>
+                <div class="descr">
+                  <h3>Преимущества<br />всех площадок</h3>
+                  <p>Площадки закрываются<br />специально для вашего<br />торжества, красивая<br />прилегающая территория,<br /> собственные фонтаны и пр.</p>
+                </div>
+              </div>
+            </div>
+            <div class="pros-col-r">
+              <div class="pros-item">
+                <div class="pic">
+                  <img src="images/ico-pros-4.png" />
+                </div>
+                <div class="descr">
+                  <h3>Алкоголь без доплаты</h3>
+                  <p>Мы обслуживаем алкогольные<br />напитки заказчика<br />без пробкового сбора.</p>
+                </div>
+              </div>
+              <div class="pros-item">
+                <div class="pic">
+                  <img src="images/ico-pros-5.png" />
+                </div>
+                <div class="descr">
+                  <h3>Выездная регистрация</h3>
+                  <p>На любой из наших площадок<br />есть место для торжественной<br />выездной регистрации.</p>
+                </div>
+              </div>
+              <div class="pros-item">
+                <div class="pic">
+                  <img src="images/ico-pros-6.png" />
+                </div>
+                <div class="descr">
+                  <h3>Прямой договор<br />с лучшими площадками<br />Москвы и области</h3>
+                  <p>На все площадки у нас<br />заключены прямые договора<br />с собственниками.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="block-order">
+        <div class="center-wrapper">
+          <div class="order-form-wrapper">
+            <div class="doves-1"></div>
+          	<div class="common-form order-form">
+              <h3>Отправить заявку</h3>
+          	  <form action=".">
+          	    <div class="fc">
+          	    	<div class="form-item errors-top form-item-name">
+          	    	  <label class="placeholder" for="order_1_name">Ваше имя</label>
+          	    	  <input type="text" class="form-text" name="order_1_name" id="order_1_name" required />
+          	    	</div>
+          	    	<div class="form-item errors-top">
+          	    	  <label class="placeholder" for="order_1_phone">Телефон</label>
+          	    	  <input type="text" class="form-text form-phone" name="order_1_phone" id="order_1_phone" />
+          	    	</div>
+          	    	<div class="form-item errors-top">
+          	    	  <label class="placeholder" for="order_1_email">E-mail</label>
+          	    	  <input type="text" class="form-text form-email" name="order_1_email" id="order_1_email" />
+          	    	</div>
+          	    	<input type="submit" value="Отправить" class="form-submit button button-2"/>
+          	    </div>
+          	  </form>
+          	</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="block-how">
+        <div class="center-wrapper">
+          <div class="how-title">
+            <h2>как мы работаем</h2>
+            <h3>рецепт счастливой свадьбы</h3>
+          </div>
+          <div class="how-items">
+            <div class="how-item how-item-1">
+              <div class="pic">
+                <img src="images/how-pic-1.png">
+              </div>
+              <div class="text">
+                ваша<br />заявка
+              </div>
+            </div>
+            <div class="how-item how-item-2">
+              <div class="pic">
+                <img src="images/how-pic-2.png">
+              </div>
+              <div class="text">
+                выбор и просмотр<br />площадок
+              </div>
+            </div>
+            <div class="how-item how-item-3">
+              <div class="pic">
+                <img src="images/how-pic-3.png">
+              </div>
+              <div class="text">
+                подтверждение<br />выбранной площадки
+              </div>
+            </div>
+            <div class="how-item how-item-4">
+              <div class="pic">
+                <img src="images/how-pic-4.png">
+              </div>
+              <div class="text">
+                выбор свадебного<br />меню
+              </div>
+            </div>
+            <div class="how-item how-item-5">
+              <div class="pic">
+                <img src="images/how-pic-5.png">
+              </div>
+              <div class="text">
+                счастливая<br />свадьба
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a name="banket"></a>
+      <div class="block-banket">
+        <div class="center-wrapper">
+      	  <h2>стоимость банкетного меню<br /><span>при заказе от 50 гостей</span></h2>
+      	  
+      	  <div class="banket-items fc">
+      	    
+      	    <div class="banket-item banket-item-1">
+      	      <div class="banket-item-cont-wrapper">
+      	        <div class="banket-item-cont">
+      	          <div class="banket-item-ttl">
+      	            <img src="images/num-3500.png" alt="3500"/><br />
+      	            рублей на персону
+      	          </div>
+      	          <ul class="banket-services">
+      	            <li>
+      	              <div class="ico ico-menu-1"></div>
+      	              <div class="tooltip-link">Изысканное меню</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Изысканное меню</h3>
+                            <hr/>
+                            <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+      	            <li>
+      	              <div class="ico ico-dishes-1"></div>
+      	              <div class="tooltip-link">Классическая посуда</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Классическая посуда</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+      	            <li>
+      	              <div class="ico ico-cloth-1"></div>
+      	              <div class="tooltip-link">Классическое накрытие<br />в&nbsp;белом цвете</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Классическое накрытие в&nbsp;белом цвете</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+      	          </ul>
+      	        </div>
+      	      </div>
+      	    </div>
+            
+            <div class="banket-item banket-item-2">
+      	      <div class="banket-item-cont-wrapper">
+      	        <div class="banket-item-cont">
+      	          <div class="banket-item-ttl">
+      	            <img src="images/num-4500.png" alt="4500"/><br />
+      	            рублей на персону
+      	          </div>
+      	          <ul class="banket-services">
+      	            <li>
+      	              <div class="ico ico-menu-2"></div>
+      	              <div class="tooltip-link">Изысканное меню</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Изысканное меню</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+                    <li>
+      	              <div class="ico ico-degustation-2"></div>
+      	              <div class="tooltip-link">Дегустация меню</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Дегустация меню</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+      	            <li>
+      	              <div class="ico ico-dishes-2"></div>
+      	              <div class="tooltip-link">3 коллекции посуды на выбор</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>3 коллекции посуды на выбор</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+      	            <li>
+      	              <div class="ico ico-cloth-2"></div>
+      	              <div class="tooltip-link">Выбор накрытий</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Выбор накрытий</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+                    <li>
+      	              <div class="ico ico-champagne-2"></div>
+      	              <div class="tooltip-link">Пирамида с шампанским на&nbsp;встречу гостей</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Пирамида с шампанским на&nbsp;встречу гостей</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+      	          </ul>
+      	        </div>
+      	      </div>
+      	    </div>
+            
+            <div class="banket-item banket-item-3">
+      	      <div class="banket-item-cont-wrapper">
+      	        <div class="banket-item-cont">
+      	          <div class="banket-item-ttl">
+      	            <img src="images/num-5500.png" alt="5500"/><br />
+      	            рублей на персону
+      	          </div>
+      	          <ul class="banket-services">
+      	            <li>
+      	              <div class="ico ico-menu-3"></div>
+      	              <div class="tooltip-link">Изысканное меню</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Изысканное меню</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+                    <li>
+      	              <div class="ico ico-individual-3"></div>
+      	              <div class="tooltip-link">Индивидуальное меню с&nbsp;шеф поваром</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Индивидуальное меню с&nbsp;шеф поваром</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+                    <li>
+      	              <div class="ico ico-degustation-3"></div>
+      	              <div class="tooltip-link">Дегустация меню</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Дегустация меню</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+      	            <li>
+      	              <div class="ico ico-dishes-3"></div>
+      	              <div class="tooltip-link">3 коллекции посуды на выбор</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>3 коллекции посуды на выбор</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+                    <li>
+      	              <div class="ico ico-furniture-3"></div>
+      	              <div class="tooltip-link">3 вида мебели на выбор</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>3 вида мебели на выбор</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+      	            <li>
+      	              <div class="ico ico-cloth-3"></div>
+      	              <div class="tooltip-link">Выбор накрытий</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Выбор накрытий</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+                    <li>
+      	              <div class="ico ico-champagne-3"></div>
+      	              <div class="tooltip-link">Пирамида с шампанским на&nbsp;встречу гостей</div>
+      	              <div class="tooltip">
+      	                <div class="tooltip-cont-wrapper">
+      	                  <div class="tooltip-cont fc">
+                            <div class="close"></div>
+      	                    <h3>Пирамида с шампанским на&nbsp;встречу гостей</h3>
+                            <hr/>
+      	                    <div class="tooltip-cols fc">
+                            	<div class="tooltip-col">
+                            	  <p>Первое знакомство с апперативным коктейлем не даст Вам соскучиться в начале ожидаемого праздника. Апперетивный коктейль является не только вкусным, но и полезным для организма.</p>
+                            	  <p>Как правило, на больших праздниках гости пробуют разнообразное количество кулинарных изысков, ингредиенты, которые входят в состав коктейля,стимулируют в желудке выделению желудочного сока, что благоприятно для дальнейшего отдыха.</p> 
+                            	  <p>На этот случай мы рады предложить Вам разнообразные варианты Welcome drink. Коктейли будут располагаться вблизи от основного входа, а подача и украшение в первую очередь привлекут к себе внимание, как говорится: "встречают по одежке..."</p>
+                            	</div>
+                            	<div class="tooltip-col">
+                            	  <img src="files/banket-pup-pic.jpg"/>
+                            	</div>
+                            </div>
+      	                  </div>
+      	                </div>
+      	              </div>
+      	            </li>
+      	          </ul>
+      	        </div>
+      	      </div>
+      	    </div>
+      	    
+      	  </div>
+      	  
+      	</div>
+      </div>
+      
+      <div class="block-wedding">
+        <div class="center-wrapper">
+          
+          <h2>наши свадьбы<br /><span>некоторые из проведенных нами свадеб</span></h2>
+          
+          <div class="wedding-item wedding-item-1 fc">
+            <div class="wedding-gallery">
+              <div class="big-pic"></div>
+              <div class="thumbs fc">
+                <a href="files/wedding-pic-1.jpg"><img src="files/wedding-pic-1-tmb.jpg"/></a>
+                <a href="files/wedding-pic-2.jpg"><img src="files/wedding-pic-2-tmb.jpg"/></a>
+                <a href="files/wedding-pic-1.jpg"><img src="files/wedding-pic-1-tmb.jpg"/></a>
+                <a href="files/wedding-pic-2.jpg"><img src="files/wedding-pic-2-tmb.jpg"/></a>
+              </div>
+            </div>
+            <div class="wedding-descr">
+              <div class="cont">
+              	<div class="date">28 сентября 2013</div>
+              	<h3>Николай и Ольга</h3>
+              	<div class="place">Зал Торжеств в усадьбе Кузьминки</div>
+              	<div class="blockquote">
+              	  <p>Спасибо за самые незабываемые и счастливые мгновения нашей свадьбы! Вы превратили ее в настоящую сказку, идеальную до мелочей и деталей.</p>
+              	</div>
+              </div>
+            </div>
+          </div>
+          <hr/>
+          <div class="wedding-item wedding-item-2 fc">
+            <div class="wedding-gallery">
+              <div class="big-pic"></div>
+              <div class="thumbs fc">
+                <a href="files/wedding-pic-1.jpg"><img src="files/wedding-pic-1-tmb.jpg"/></a>
+                <a href="files/wedding-pic-2.jpg"><img src="files/wedding-pic-2-tmb.jpg"/></a>
+                <a href="files/wedding-pic-1.jpg"><img src="files/wedding-pic-1-tmb.jpg"/></a>
+                <a href="files/wedding-pic-2.jpg"><img src="files/wedding-pic-2-tmb.jpg"/></a>
+              </div>
+            </div>
+            <div class="wedding-descr">
+              <div class="cont">
+              	<div class="date">13 апреля 2013</div>
+              	<h3>константин и александра</h3>
+              	<div class="place">Юсуповский дворец в Москве</div>
+              	<div class="blockquote">
+              	  <p>Очень хотели организовать свадьбу «без проблем», но так чтобы это было современно, оригинально и незабываемо. Мы очень рады, что доверили свадьбу именно вам! Спасибо за работу!</p>
+              	</div>
+              </div>
+            </div>
+          </div>
+          <hr/>
+          <div class="wedding-item wedding-item-1 fc">
+            <div class="wedding-gallery">
+              <div class="big-pic"></div>
+              <div class="thumbs fc">
+                <a href="files/wedding-pic-1.jpg"><img src="files/wedding-pic-1-tmb.jpg"/></a>
+                <a href="files/wedding-pic-2.jpg"><img src="files/wedding-pic-2-tmb.jpg"/></a>
+                <a href="files/wedding-pic-1.jpg"><img src="files/wedding-pic-1-tmb.jpg"/></a>
+                <a href="files/wedding-pic-2.jpg"><img src="files/wedding-pic-2-tmb.jpg"/></a>
+              </div>
+            </div>
+            <div class="wedding-descr">
+              <div class="cont">
+              	<div class="date">28 сентября 2013</div>
+              	<h3>Николай и Ольга</h3>
+              	<div class="place">Зал Торжеств в усадьбе Кузьминки</div>
+              	<div class="blockquote">
+              	  <p>Спасибо за самые незабываемые и счастливые мгновения нашей свадьбы! Вы превратили ее в настоящую сказку, идеальную до мелочей и деталей.</p>
+              	</div>
+              </div>
+            </div>
+          </div>
+          <hr/>
+          <div class="wedding-item wedding-item-2 fc">
+            <div class="wedding-gallery">
+              <div class="big-pic"></div>
+              <div class="thumbs fc">
+                <a href="files/wedding-pic-1.jpg"><img src="files/wedding-pic-1-tmb.jpg"/></a>
+                <a href="files/wedding-pic-2.jpg"><img src="files/wedding-pic-2-tmb.jpg"/></a>
+                <a href="files/wedding-pic-1.jpg"><img src="files/wedding-pic-1-tmb.jpg"/></a>
+                <a href="files/wedding-pic-2.jpg"><img src="files/wedding-pic-2-tmb.jpg"/></a>
+              </div>
+            </div>
+            <div class="wedding-descr">
+              <div class="cont">
+              	<div class="date">28 сентября 2013</div>
+              	<h3>Николай и Ольга</h3>
+              	<div class="place">Зал Торжеств в усадьбе Кузьминки</div>
+              	<div class="blockquote">
+              	  <p>Спасибо за самые незабываемые и счастливые мгновения нашей свадьбы! Вы превратили ее в настоящую сказку, идеальную до мелочей и деталей.</p>
+              	</div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="block-order block-order-2">
+        <div class="center-wrapper">
+          <div class="order-form-wrapper">
+            <div class="doves-2"></div>
+            <div class="doves-3"></div>
+          	<div class="common-form order-form">
+              <h3>Отправить заявку</h3>
+          	  <form action=".">
+          	    <div class="fc">
+          	    	<div class="form-item errors-top form-item-name">
+          	    	  <label class="placeholder" for="order_2_name">Ваше имя</label>
+          	    	  <input type="text" class="form-text" name="order_2_name" id="order_2_name" required />
+          	    	</div>
+          	    	<div class="form-item errors-top">
+          	    	  <label class="placeholder" for="order_2_phone">Телефон</label>
+          	    	  <input type="text" class="form-text form-phone" name="order_2_phone" id="order_2_phone" />
+          	    	</div>
+          	    	<div class="form-item errors-top">
+          	    	  <label class="placeholder" for="order_2_email">E-mail</label>
+          	    	  <input type="text" class="form-text form-email" name="order_2_email" id="order_2_email" />
+          	    	</div>
+          	    	<input type="submit" value="Отправить" class="form-submit button button-2"/>
+          	    </div>
+          	  </form>
+          	</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="block-social">
+        <div class="center-wrapper">
+          <div class="fc">
+            <div class="social-l-col">
+              <div class="fb-wrapper">
+              	<div class="fb-like-box" data-href="http://www.facebook.com/FacebookDevelopers" data-width="704" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+              </div>
+            </div>
+            <div class="social-r-col">
+              <script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
+
+              <!-- VK Widget -->
+              <div id="vk_groups"></div>
+              <script type="text/javascript">
+              VK.Widgets.Group("vk_groups", {mode: 0, width: "220", height: "250", color1: 'ааа', color2: '000', color3: 'ffc954'}, 20003922);
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-top">
+    <div class="center-wrapper">
+      <div class="fc">
+        <div class="site-ttl">
+          <div class="ttl">
+            Свадебные банкеты<br />
+            на самых торжественных<br />
+            площадках
+          </div>
+          <span>
+            Москвы и Московской области
+          </span>
+        </div>
+        <div class="logo">
+          <img src="images/logo.png" alt="Cardinale Catering"/>
+        </div>
+        <div class="footer-phone">
+          <div class="footer-callback">
+            <span class="callback-button" onclick="openPopup('callbackPopup')">Заказать звонок</span>
+          </div>
+          <div class="footer-phone-phone">
+            <span class="phone"><span>+7 (495)</span> 665-52-39</span>
+          </div>
+          <div class="button" onclick="openPopup('orderPopup')">Заказать кейтеринг</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom fc">
+    <div class="center-wrapper">
+    	<div class="socbuttons">
+        <span>присоединяйтесь к нам</span>
+    	  <a href="#"><img src="images/ico-instagram.png" /></a>
+    	  <a href="#"><img src="images/ico-vk.png" /></a>
+    	  <a href="#"><img src="images/ico-fb.png" /></a>
+    	</div>
+    	<div class="copy">
+    	  Разработка сайта &mdash; <a href="http://renart.ru">Renaissance Art Group</a>
+    	</div>
+    </div>
+  </div>
+</div>
+
+<!-- Popups -->
+
+<div class="popup order-popup" id="orderPopup">
+  <div class="popup-content">
+    <div class="close"></div>
+    <div class="form-wrapper">
+      <div class="common-form order-form-2">
+        <div class="form-cont">
+          <h2><span>Отправить заявку</span>
+              и мы свяжемся с вами в ближайшее время</h2>
+          <form action=".">
+            <div class="form-item errors-left">
+              <label class="placeholder" for="order_23_name">Ваше имя</label>
+              <input type="text" class="form-text" name="order_23_name" id="order_23_name" required />
+            </div>
+            <div class="form-row fc">
+              <div class="form-item errors-left">
+                <label class="placeholder" for="order_23_phone">Телефон</label>
+                <input type="text" class="form-text form-phone" name="order_23_phone" id="order_23_phone" />
+              </div>
+              <div class="form-item">
+                <label class="placeholder" for="order_23_email">E-mail</label>
+                <input type="text" class="form-text form-email" name="order_23_email" id="order_23_email" />
+              </div>
+            </div>
+            <div class="form-item errors-left">
+              <label class="placeholder" for="order_23_message">Ваш комментарий</label>
+              <textarea class="form-textarea" name="order_23_message" id="order_23_message" rows="8" required></textarea>
+            </div>
+            <div class="form-footer">
+              <input type="submit" value="Отправить заявку" class="form-submit button"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup callback-popup" id="callbackPopup">
+  <div class="popup-content">
+    <div class="close"></div>
+    <div class="form-wrapper">
+      <div class="common-form callback-form">
+        <div class="form-cont">
+          <h2><span>Заказать звонок</span></h2>
+          <form action=".">
+            <div class="form-item errors-left">
+              <label class="placeholder" for="order_24_name">Ваше имя</label>
+              <input type="text" class="form-text" name="order_24_name" id="order_24_name" required />
+            </div>
+            <div class="form-item errors-left">
+              <label class="placeholder" for="order_24_phone">Телефон</label>
+              <input type="text" class="form-text form-phone" name="order_24_phone" id="order_24_phone" required />
+            </div>
+            <div class="form-footer">
+              <input type="submit" value="Отправить" class="form-submit button"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popups END -->
+
+</body>
+
+</html>
