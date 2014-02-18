@@ -335,6 +335,11 @@ function makeup() {
       divBtn.on("click",function () {
         submit.click();
       });
+      
+      if ($(this).css("display") == "none") {
+        divBtn.hide();
+      }
+      
     }
     
   });
