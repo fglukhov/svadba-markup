@@ -2,12 +2,14 @@
   $("body").css("width","");
   pupMakeup();
   makeup();
+  makeup404();
 });
 
 $(window).load(function() {
   $("body").css("width",$("body").width()-1).css("width",$("body").width()+1);
   makeup();
   pupMakeup();
+  makeup404();
 });
 
 
@@ -22,6 +24,8 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function () {
+
+  makeup404();
 
   $(".video-thumbs .item").click(function() {
     $(".video-thumbs .act").removeClass("act");
@@ -984,4 +988,12 @@ function fNum(number) {
   };
 })( jQuery );
 
-
+function makeup404() {
+  if ($(".content-404").length) {
+    var contentHeight = $(window).height() - $(".footer").outerHeight() - $(".header").outerHeight();
+    if (contentHeight < 400) contentHeight = 400;
+    $(".content-404").css("height","auto").css({
+      height: contentHeight
+    })
+  }
+}
