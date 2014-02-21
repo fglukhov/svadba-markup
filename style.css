@@ -3371,3 +3371,7 @@ a.place-presentation img {
   text-transform:uppercase;
   padding:0 0 39px 0;
 }
+
+div.button-loading {
+  display:none !important;
+}

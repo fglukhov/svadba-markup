@@ -340,9 +340,7 @@ function makeup() {
         submit.click();
       });
       
-      if ($(this).css("display") == "none") {
-        divBtn.hide();
-      }
+      
       
     }
     
