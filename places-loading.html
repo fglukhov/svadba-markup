@@ -17,12 +17,6 @@
 <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    openPopup("datePopup");
-  });
-</script>
-
 </head>
 
 <body>
@@ -35,6 +29,12 @@
   js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    elementLoader("placesList","#fff")
+  });
+</script>
 
 <div class="top-wrap">
 
@@ -78,22 +78,6 @@
             <li><a href="#">Партнетры</a></li>
           </ul>
         </div>
-      </div>
-      
-      <div class="fixed-menu">
-        <div class="logo">
-          <a href="#"><img src="images/logo-fixed.png" alt="Свадьба в усадьбе"/></a>
-        </div>
-        <div class="main-menu-wrapper fc">
-          <div class="center-wrapper">
-            <ul class="main-menu">
-              <li><a href="#">Главная</a></li>
-              <li class="act"><a href="#">Каталог площадок</a></li>
-              <li><a href="#">Партнетры</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="button" onclick="openPopup('orderPopup')">Заказать кейтеринг</div>
       </div>
       
     </div>
@@ -150,25 +134,7 @@
             
             <h1>Каталог площадок</h1>
             
-            <div class="free-places-info">
-              <div class="cont">
-                20 сентября 2014 свободно площадок: <span>6</span>
-              </div>
-            </div>
-            
-            <div class="places-presentation">
-              <div class="cont">
-                <div class="pic">
-                  <a href="#"><img src="images/ico-pdf.png"/></a>
-                </div>
-                <div class="descr">
-                  Презентация свободных площадок на 20 сентября 2014 года<br />
-                  <a href="#">Скачать PDF-файл 1,8 мб</a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="places-list">
+            <div class="places-list" id="placesList">
               <div class="places-item fc">
                 <div class="pic">
                   <a href="#">
@@ -465,7 +431,7 @@
                 			  	<label for="p_capacity_3"><input type="checkbox" name="p_capacity_3" id="p_capacity_3"/>От 50 до 150 гостей</label>
                 			  </div>
                 			  <div class="form-item">
-                			  	<label for="p_capacity_3"><input type="checkbox" name="p_capacity_3" id="p_capacity_3"/>Более 150 гостей</label>
+                			  	<label for="p_capacity_4"><input type="checkbox" name="p_capacity_4" id="p_capacity_4"/>Более 150 гостей</label>
                 			  </div>
                 			  
                 			</div>
@@ -613,48 +579,6 @@
             </div>
           </div>
         </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="popup date-popup" id="datePopup">
-  <div class="popup-content">
-    <div class="close"></div>
-    <div class="fc">
-    	<div class="date-popup-l">
-    		<div class="d-cont">
-    			<div class="form-wrapper">
-    			  <div class="common-form date-select-form">
-    			    <div class="form-cont">
-    			      <h3>выберите дату</h3>
-                <div class="txt">
-                  и мы подберем свободные<br />
-                  площадки в этот день
-                </div>
-    			      <form action=".">
-    			        <div class="form-item">
-                    <label for="date_popup_date" class="placeholder">дд&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мм&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;гггг</label>
-                    <input type="text" class="form-text form-date" name="date_popup_date" id="date_popup_date" required />
-                  </div>
-    			        <div class="form-footer">
-    			          <input type="submit" value="Подобрать площадки" class="form-submit button button-3"/>
-    			        </div>
-    			      </div>
-    			    </form>
-    			  </div>
-    			</div>
-    		</div>
-    	</div>
-      <div class="date-popup-r">
-        <div class="d-cont">
-        	<h3>если вы<br />еще не выбрали<br />дату свадьбы</h3>
-        	<div class="txt">
-        	  мы предлагаем Вам посмотреть<br />
-        	  все площадки на все даты
-        	</div>
-        	<div class="button button-4">Смотреть все площадки</div>
-        </div>
       </div>
     </div>
   </div>

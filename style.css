@@ -239,6 +239,50 @@ a.button:visited {
   background:none;
 }
 
+.fixed-menu {
+  background:#fff;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  -webkit-box-shadow:0 7px 10px 0 rgba(0,0,0,.11);
+  -moz-box-shadow:0 7px 10px 0 rgba(0,0,0,.11);
+  box-shadow:0 7px 10px 0 rgba(0,0,0,.11);
+  display:none;
+  z-index:20;
+}
+
+.logo-fixed {
+  width: 215px;
+  height: 51px;
+  overflow: hidden;
+  float: left;
+  padding: 9px 0;
+}
+
+.fixed-menu .main-menu-wrapper {
+  float: left;
+  background: none;
+  width: 563px;
+  padding: 8px 0 0 0;
+}
+
+.fixed-menu .main-menu {
+  font-size:18px;
+}
+
+.fixed-menu .button {
+  float:right;
+}
+
+.fixed-menu .main-menu li {
+  padding:0 13px 0 21px;
+}
+
+.fixed-menu .button {
+  margin:16px 0 0 0;
+}
+
 .header-top,
 .footer-top {
   position:relative;
@@ -1709,18 +1753,18 @@ a.button:visited {
 }
 
 .popup .close {
-  width:30px;
-  height:30px;
   position:absolute;
-  right:-5px;
-  top:-5px;
-  background:url(images/pup-close.png) 0 0 no-repeat;
   cursor:pointer;
   z-index:10;
+  width:36px;
+  height:36px;
+  background:url(images/pup-close.png) 0 0 no-repeat;
+  right: -16px;
+  top: -15px;
 }
 
 .popup .close:hover {
-  background-position:0 -30px;
+  background-position:0 -36px;
 }
 
 .popup .popup-content {
@@ -1843,12 +1887,21 @@ a.button:visited {
   text-transform:uppercase;
 }
 
+.wedding-item .wedding-descr .place a,
+.wedding-item .wedding-descr .place a:visited {
+  text-decoration:none;
+}
+
+.wedding-item .wedding-descr .place a:hover {
+  text-decoration:underline;
+}
+
 .wedding-item .wedding-descr .blockquote {
   font-size:14px;
   line-height:20px;
   font-style:italic;
   position:relative;
-  margin:43px 0 0 0;
+  margin:33px 0 0 0;
   padding:0 10px;
 }
 
@@ -1872,6 +1925,8 @@ a.button:visited {
 
 .wedding-item-1 .date,
 .wedding-item-1 .place,
+.wedding-item-1 .place a,
+.wedding-item-1 .place a:visited,
 .wedding-item-1 .wedding-descr .blockquote p:before,
 .wedding-item-1 .wedding-descr .blockquote p:after {
   color:#734dbc;
@@ -1879,6 +1934,8 @@ a.button:visited {
 
 .wedding-item-2 .date,
 .wedding-item-2 .place,
+.wedding-item-2 .place a,
+.wedding-item-2 .place a:visited,
 .wedding-item-2 .wedding-descr .blockquote p:before,
 .wedding-item-2 .wedding-descr .blockquote p:after {
   color:#953f4c;
@@ -3181,10 +3238,17 @@ a.place-presentation img {
   display:block;
 }
 
-.date-popup .loader-1 {
+.loader-1 {
   width:100%;
   height:30px;
   background:url(images/loader-1.gif) center 0 no-repeat;
+  margin:24px 0 0 0;
+}
+
+.loader-3 {
+  width:100%;
+  height:30px;
+  background:url(images/loader-3.gif) center 0 no-repeat;
   margin:24px 0 0 0;
 }
 
@@ -3203,6 +3267,10 @@ a.place-presentation img {
   color:#ff788c;
   font-size:34px;
   padding:0 0 0 75px;
+}
+
+.date-popup input.error {
+  padding:0 0 0 73px;
 }
 
 .date-popup .placeholder {
@@ -3374,4 +3442,52 @@ a.place-presentation img {
 
 div.button-loading {
   display:none !important;
+}
+
+.form-thanks {
+  font-family:'Ubuntu Condensed';
+  color:#262626;
+  font-size:20px;
+  line-height:24px;
+  text-align:center;
+  margin:-10px 0 5px 0;
+}
+
+.loader {
+  height:30px;
+}
+
+.block-order .loader {
+  float:left;
+  width:100px;
+  height:30px;
+  margin-top:2px;
+}
+
+.element-loader {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:10;
+  min-height:200px;
+}
+
+.element-loader .loader-bg {
+  opacity:.7;
+  filter:alpha(opacity=70);
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+}
+
+.element-loader .loader-pic {
+  background:url(images/loader-3.gif) 0 0 no-repeat;
+  width:30px;
+  height:30px;
+  position:absolute;
+  left:50%;
+  top:100px;
+  margin:0 0 0 -33px;
 }

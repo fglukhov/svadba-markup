@@ -19,7 +19,7 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    openPopup("datePopup");
+    openPopup("sentPopup");
   });
 </script>
 
@@ -78,22 +78,6 @@
             <li><a href="#">Партнетры</a></li>
           </ul>
         </div>
-      </div>
-      
-      <div class="fixed-menu">
-        <div class="logo">
-          <a href="#"><img src="images/logo-fixed.png" alt="Свадьба в усадьбе"/></a>
-        </div>
-        <div class="main-menu-wrapper fc">
-          <div class="center-wrapper">
-            <ul class="main-menu">
-              <li><a href="#">Главная</a></li>
-              <li class="act"><a href="#">Каталог площадок</a></li>
-              <li><a href="#">Партнетры</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="button" onclick="openPopup('orderPopup')">Заказать кейтеринг</div>
       </div>
       
     </div>
@@ -583,10 +567,26 @@
               <textarea class="form-textarea" name="order_23_message" id="order_23_message" rows="8" required></textarea>
             </div>
             <div class="form-footer">
-              <input type="submit" value="Отправить заявку" class="form-submit button"/>
+              <input type="submit" value="Отправить заявку" class="form-submit button button-loading"/>
+              <div class="loader loader-3"></div>
             </div>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup order-popup" id="sentPopup">
+  <div class="popup-content">
+    <div class="close"></div>
+    <div class="form-wrapper">
+      <div class="common-form order-form-2">
+        <div class="form-cont">
+          <h2><span>Спасибо!</span></h2>
+          <div class="form-thanks">
+            Ваша заявка успешно отправлена. В ближайшее время<br />с вами свяжется наш менеджер
+          </div>
       </div>
     </div>
   </div>
@@ -609,7 +609,8 @@
               <input type="text" class="form-text form-phone" name="order_24_phone" id="order_24_phone" required />
             </div>
             <div class="form-footer">
-              <input type="submit" value="Отправить" class="form-submit button"/>
+              <input type="submit" value="Отправить" class="form-submit button button-loading"/>
+              <div class="loader loader-3"></div>
             </div>
           </div>
         </form>
@@ -635,10 +636,11 @@
     			      <form action=".">
     			        <div class="form-item">
                     <label for="date_popup_date" class="placeholder">дд&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мм&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;гггг</label>
-                    <input type="text" class="form-text form-date" name="date_popup_date" id="date_popup_date" required />
+                    <input type="text" class="form-text form-date" name="date_popup_date" id="date_popup_date"/>
                   </div>
     			        <div class="form-footer">
-    			          <input type="submit" value="Подобрать площадки" class="form-submit button button-3"/>
+    			          <input type="submit" value="Подобрать площадки" class="form-submit button button-3 button-loading"/>
+                    <div class="loader loader-1"></div>
     			        </div>
     			      </div>
     			    </form>

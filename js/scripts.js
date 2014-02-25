@@ -15,7 +15,7 @@ $(window).load(function() {
 
 $(window).scroll(function() {
   if ($(".fixed-menu").length) {
-    if ($(window).scrollTop() > $(".main-menu-wrapper").outerHeight()) {
+    if ($(window).scrollTop() > $(".header").outerHeight()) {
       $(".fixed-menu").fadeIn(150)
     } else {
       $(".fixed-menu").fadeOut(150)
@@ -64,16 +64,23 @@ $(document).ready(function () {
       firstDay: 1,
       beforeShow: function(input,inst) {
         $('#ui-datepicker-div').addClass(this.id);
+      },
+      onSelect: function() {
+        $("#date_popup_date").parents(".form-item").find(".error-wrapper").hide();
+        $("#date_popup_date").parents(".form-item").find(".placeholder").hide();
+        $("#date_popup_date").removeClass("error");
       }
     });
     
-    $("#date_popup_date").click(function() {
-      $(this).closest(".placeholder").css("left",-5000);
-    });
+    $("#date_popup_date").mask("99    99     9999");
     
-    $("#datePopup .placeholder").click(function() {
-      $(this).css("left",-5000);
-    });
+    // $("#date_popup_date").click(function() {
+      // $(this).closest(".placeholder").css("left",-5000);
+    // });
+    
+    // $("#datePopup .placeholder").click(function() {
+      // $(this).css("left",-5000);
+    // });
     
   }
   
@@ -351,7 +358,7 @@ function makeup() {
     
     if ($(this).prop("tagName") == "INPUT" || $(this).prop("tagName") == "TEXTAREA") {
       // if (!$(this).parents(".input-wrapper").length) $(this).wrap("<div class='input-wrapper'></div>");
-      if ($(this).hasClass("form-phone")) {
+      if ($(this).hasClass("form-phone") || $(this).hasClass("form-date")) {
         $(this).focus(function() {
           $(this).removeClass("initial");
           $(this).parents(".form-item").find(".placeholder").hide();
@@ -993,5 +1000,20 @@ function makeup404() {
     $(".content-404").css("height","auto").css({
       height: contentHeight
     })
+  }
+}
+
+function elementLoader(elementId,loaderBg) {
+  var el = $("#"+elementId);
+  if (!$(".element-loader[rel='"+elementId+"']").length) {
+    $("body").append("<div class='element-loader' rel='"+elementId+"'></div>");
+    var loader = $(".element-loader[rel='"+elementId+"']");
+    loader.css({
+      "left":el.offset().left,
+      "top":el.offset().top,
+      "width":el.width(),
+      "height":el.height()
+    }).append("<div class='loader-bg' />").append("<div class='loader-pic' />");
+    loader.find(".loader-bg").css("background-color",loaderBg)
   }
 }
