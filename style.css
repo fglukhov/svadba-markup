@@ -3491,3 +3491,67 @@ div.button-loading {
   top:100px;
   margin:0 0 0 -33px;
 }
+
+.map-balloon {
+  width:380px;
+  height:122px;
+  background:url(images/balloon-bg.png) 0 0 no-repeat;
+  position:absolute;
+}
+
+.map-balloon .close {
+  cursor:pointer;
+  position:absolute;
+  right:5px;
+  top:5px;
+  width:20px;
+  height:20px;
+  background:url(images/close.png) 0 0 no-repeat;
+}
+
+.map-balloon .close:hover {
+  background-position:0 -20px;
+}
+
+.map-balloon .pic {
+  padding:18px 15px 0 18px;
+  float:left;
+  width:80px;
+}
+
+.map-balloon .pic img {
+  -webkit-border-radius:40px;
+  -moz-border-radius:40px;
+  border-radius:40px;
+  width:80px;
+  height:80px;
+}
+
+.map-balloon .descr {
+  padding: 20px 26px 0 0;
+  height: 75px;
+  width:241px;
+  float:left;
+  overflow:hidden;
+}
+
+.map-balloon .descr a,
+.map-balloon .descr a:visited {
+  font-family:'Ubuntu Condensed';
+  font-size:20px;
+  line-height:22px;
+  text-decoration:none;
+  background:url(images/line-violet.png) 0 22px repeat-x;
+  color:#262626;
+}
+
+.map-balloon .descr a:hover {
+  background:none;
+}
+
+.map-balloon .descr .cont {
+  height:60px;
+  vertical-align:middle;
+  display:table-cell;
+  overflow:hidden;
+}
