@@ -2183,14 +2183,13 @@ a.button:visited {
 
 .places-presentation {
   height:67px;
-  background:url(images/places-presentation-bg.png) 0 0 no-repeat;
   font-size:13px;
   line-height:18px;
-  margin:0 0 20px 0;
+  padding: 0 0 0 18px;
+  margin: 0;
 }
 
 .places-presentation .cont {
-  padding:14px 20px 0 20px;
 }
 
 .places-presentation .pic {
@@ -2201,6 +2200,7 @@ a.button:visited {
 
 .places-presentation .descr {
   overflow:hidden;
+  padding:10px 0 0 0;
 }
 
 .places-presentation a,
@@ -2720,6 +2720,7 @@ a.button:visited {
 
 .simple-slider .slider {
   position:relative;
+  height:401px;
 }
 
 .simple-slider .slide {
@@ -3554,4 +3555,50 @@ div.button-loading {
   vertical-align:middle;
   display:table-cell;
   overflow:hidden;
+}
+
+.places-tabs {
+  padding:6px 0 0 0;
+}
+
+.places-tabs .tabs {
+  background:url(images/line-1-dashed.png) 0 bottom repeat-x;
+}
+
+.places-tabs .tab {
+  background:#f9f5ef;
+  -webkit-border-radius:4px 4px 0 0;
+  -moz-border-radius:4px 4px 0 0;
+  border-radius:4px 4px 0 0;
+  font-family:'Ubuntu Condensed';
+  color:#262626;
+  font-size:20px;
+  line-height:24px;
+  cursor:pointer;
+  float:left;
+  margin:0 5px 0 0;
+  width:152px;
+  height:48px;
+}
+
+.places-tabs .tabs .act {
+  height:49px;
+  border-bottom:none;
+  margin-bottom:-1px;
+  padding-bottom:1px;
+  color:#8f66e3;
+  background:url(images/act-tab-bg.png) 0 0 no-repeat;
+}
+
+.places-tabs .tabs span.num {
+  font-size:24px;
+}
+
+.places-tabs .tabs .cont {
+  text-align:center;
+  padding:11px 0 0 0;
+}
+
+.places-tabs .tabs-content {
+  padding:22px 0 0 0;
 }
