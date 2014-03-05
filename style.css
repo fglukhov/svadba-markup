@@ -2670,6 +2670,15 @@ a.button:visited {
   box-shadow: 0 1px 0 0 #f7f5f3;
 }
 
+.ui-datepicker .ui-state-highlight {
+  background: #bdbdbd;
+  background: -webkit-linear-gradient(#e1e1e1, #bdbdbd);
+  background: -o-linear-gradient(#e1e1e1, #bdbdbd);
+  background: -moz-linear-gradient(#e1e1e1, #bdbdbd);
+  background: linear-gradient(#e1e1e1, #bdbdbd);
+  font-weight:bold;
+}
+
 .ui-datepicker .ui-state-active {
   background:#ffb225;
   -webkit-box-shadow: 0 1px 0 0 #ffb225;

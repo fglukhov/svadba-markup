@@ -53,7 +53,11 @@ $(document).ready(function () {
     $("#places_datepicker").datepicker({
       altField: $("#places_date"),
       altFormat: "dd-mm-yy",
-      firstDay: 1
+      firstDay: 1,
+      beforeShow: function(input,inst) {
+        $("#places_datepicker").datepicker( "setDate", null );
+        $("#places_datepicker .ui-state-active").removeClass("ui-state-active");
+      }
     });
     //$("#places_datepicker").datepicker( "setDate", "10/12/2012" );
   }
@@ -182,12 +186,17 @@ $(document).ready(function () {
     
   })
   
-  $(document).on("click",function(event) {
-    if (!$(event.target).hasClass("pup-tooltip") && !$(event.target).hasClass("tooltip-link-act")) {
-      $(".pup-tooltip").fadeOut(150,function() {
-        $(".pup-tooltip").remove();
-        $(".tooltip-link-act").removeClass("tooltip-link-act");
-      })
+  $(document).mouseup(function (e) {
+    var container1 = $(".pup-tooltip");
+    var container2 = $(".tooltip-link-act");
+
+    if (!container1.is(e.target) && !container2.is(e.target) // if the target of the click isn't the container...
+        && container1.has(e.target).length === 0 && container2.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        $(".pup-tooltip").fadeOut(150,function() {
+          $(".pup-tooltip").remove();
+          $(".tooltip-link-act").removeClass("tooltip-link-act");
+        })
     }
   });
   
@@ -1017,3 +1026,24 @@ function elementLoader(elementId,loaderBg) {
     loader.find(".loader-bg").css("background-color",loaderBg)
   }
 }
+
+(function ($) {
+    $.extend($.datepicker, {
+
+        // Reference the orignal function so we can override it and call it later
+        _inlineDatepicker2: $.datepicker._inlineDatepicker,
+
+        // Override the _inlineDatepicker method
+        _inlineDatepicker: function (target, inst) {
+
+            // Call the original
+            this._inlineDatepicker2(target, inst);
+
+            var beforeShow = $.datepicker._get(inst, 'beforeShow');
+
+            if (beforeShow) {
+                beforeShow.apply(target, [target, inst]);
+            }
+        }
+    });
+}(jQuery));
