@@ -5,6 +5,11 @@
           zoom: 10,
           behaviors: ['default']
       });
+      
+      myMap.controls.add(
+        new ymaps.control.ZoomControl(),
+        { right: 110, top: 20 }
+      );
 
       // Баллун свободной площадки.
       MyBalloonLayout1 = ymaps.templateLayoutFactory.createClass(
@@ -295,6 +300,92 @@
   myMap.geoObjects
     .add(myPlacemark1)
     .add(myPlacemark2);
+    
+  MyButtonLayout = ymaps.templateLayoutFactory.createClass(
+            '<button style="display:none;" class="btn btn-large[if state.selected] active[endif]" title="$[data.title]">' +
+                '<i class="icon-fullscreen icon-large"/>' +
+            '</button>', {
+                build: function () {
+                    this.constructor.superclass.build.apply(this, arguments);
+
+                    this._button = this.getData().control;
+                    this._container = $('#mapPlaces');
+                    this._smallSize = {
+                        position: 'relative',
+                        width: 1200,
+                        height: 340,
+                        marginLeft:-110
+                    };
+                    this._fullSize = {
+                        position: 'fixed',
+                        top: 0,
+                        left:0,
+                        width : $(window).width(),
+                        height : $(window).height(),
+                        zIndex: 10,
+                        marginLeft: 0
+                    }
+
+                    this._attachHandlers();
+                },
+                clear: function () {
+                    this._detachHandlers();
+
+                    this.constructor.superclass.clear.apply(this, arguments);
+                },
+                _attachHandlers: function () {
+                    this._button.events
+                        .add(['select', 'deselect'], this._onButtonClick, this);
+                },
+                _detachHandlers: function () {
+                    this._button.events
+                        .remove(['select', 'deselect'], this._onButtonClick, this);
+                },
+                _onButtonClick: function (e) {
+                    var map = this._button.getMap(),
+                        state = this._button.state;
+
+                    if(state.get('selected')) {
+                        this._container
+                            .css(this._fullSize);
+                    }
+                    else {
+                        this._container
+                            .css(this._smallSize);
+                    }
+
+                    map.container.fitToViewport();
+                }
+                
+                
+                
+            }
+        ),
+
+        // Создание кнопки полноэкранного режима просмотра карты.
+        button = new ymaps.control.Button({
+            data: {
+                title: 'Разворачивает карту на весь экран'
+            }
+        }, {
+            // selectOnClick: false,
+            layout: MyButtonLayout
+        });
+        
+        $(".fullscreen-button").on("click",function() {
+          $(".btn-large").click();
+          $(this).find(".fullscreen-ico").toggleClass("fullscreen-ico-act");
+          if ($(".fullscreen-ico").hasClass("fullscreen-ico-act")) {
+            $(this).find("span").html("Свернуть");
+            myMap.behaviors.enable('scrollZoom');
+          } else {
+            $(this).find("span").html("На весь экран");
+            myMap.behaviors.disable('scrollZoom');
+          }
+        });
+
+    // Добавление панели инструментов на карту
+    myMap.controls.add(button, { top : 10, left : 10 });
   
   $(".map-buttons .map-button").click(function() {
     $(".map-buttons .map-button").removeClass("map-button-act");
@@ -315,6 +406,26 @@
       myMap.setZoom(8)
     }
     
+  })
+  
+  $(".map-cont .pan-left").click(function() {
+    var position = myMap.getGlobalPixelCenter();
+    myMap.setGlobalPixelCenter([ position[0] - 200, position[1] ]);
+  })
+  
+  $(".map-cont .pan-right").click(function() {
+    var position = myMap.getGlobalPixelCenter();
+    myMap.setGlobalPixelCenter([ position[0] + 200, position[1] ]);
+  })
+  
+  $(".map-cont .pan-up").click(function() {
+    var position = myMap.getGlobalPixelCenter();
+    myMap.setGlobalPixelCenter([ position[0], position[1] - 200 ]);
+  })
+  
+  $(".map-cont .pan-down").click(function() {
+    var position = myMap.getGlobalPixelCenter();
+    myMap.setGlobalPixelCenter([ position[0], position[1] + 200 ]);
   })
   
 });

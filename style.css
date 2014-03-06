@@ -1567,8 +1567,9 @@ a.button:visited {
   background-position:107px 0;
   background-repeat:no-repeat;
   max-width:1000px;
-  font-size:13px;
-  line-height:20px;
+  font-size:12px;
+
+  line-height:16px;
 }
 
 .pup-tooltip .tooltip-cols {
@@ -1580,6 +1581,22 @@ a.button:visited {
   width:440px;
   float:left;
 }
+
+.pup-tooltip .tooltip-col * {
+  text-align:left !important;
+}
+
+.pup-tooltip .tooltip-col h3,
+.pup-tooltip .tooltip-col h4 {
+  padding:0 !important;
+}
+
+.pup-tooltip li {
+  padding: 0 0 0 12px;
+  background: url(images/bullet.png) 0 7px no-repeat;
+  margin: 0 0 4px 0;
+}
+
 
 .pup-tooltip .tooltip-col img {
   max-width:440px;
@@ -1645,16 +1662,33 @@ a.button:visited {
   margin:-5px 0 16px 0;
 }
 
-.pup-tooltip-1 h3 {
+.pup-tooltip h4 {
+  padding:0 30px 0 30px;
+  font-family:'Ubuntu Condensed';
+  text-transform:uppercase;
+  font-size:16px;
+  line-height:20px;
+  text-align:center;
+  margin:24px 0 8px 0;
+}
+
+.pup-tooltip-1 h3,
+.pup-tooltip-1 h4 {
   color:#8f66e3;
 }
 
-.pup-tooltip-2 h3 {
+.pup-tooltip-2 h3,
+.pup-tooltip-2 h4 {
   color:#ff788b;
 }
 
-.pup-tooltip-3 h3 {
+.pup-tooltip-3 h3,
+.pup-tooltip-3 h4 {
   color:#ffaf1f;
+}
+
+.pup-tooltip .tooltip-col h3 {
+  margin-top:24px;
 }
 
 .pup-tooltip hr {
@@ -1741,13 +1775,13 @@ a.button:visited {
   left:0;
   top:0;
   background:url(images/tint.png);
-  z-index:59;
+  z-index:9999;
 }
 
 .popup {
   display:none;
   position:absolute;
-  z-index:60;
+  z-index:10000;
   border:5px solid #ffce64;
   background:#fff;
 }
@@ -2030,8 +2064,44 @@ a.button:visited {
   margin:-1px 0 28px 0;
 }
 
-.map-cont {
-  height:440px;
+.places-map .map-cont {
+  width:1200px;
+  height:340px;
+  margin:0 -110px;
+  position:relative;
+}
+
+.places-map .fullscreen-button {
+  color:#625e5e;
+  font-size:14px;
+  cursor:pointer;
+  height:29px;
+  line-height:29px;
+  padding:0 15px 0 0;
+  z-index:3;
+  position:absolute;
+  top:20px;
+  left:110px;
+  background:#fff;
+  padding:2px 15px 2px 2px;
+  behavior:url(/PIE.htc);
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  border-radius:6px;
+  -webkit-box-shadow:0 0 5px 0 #666;
+  -moz-box-shadow:0 0 5px 0 #666;
+  box-shadow:0 0 5px 0 #666;
+  margin:0 10px 0 0;
+  float:left;
+  font-size:12px;
+}
+
+.places-map .fullscreen-ico {
+  width:31px;
+  height:29px;
+  background:url(images/ico-fullscreen.png) 0 0 no-repeat;
+  margin:0 10px 0 0;
+  float:left;
 }
 
 .map-controls {
@@ -2214,6 +2284,7 @@ a.button:visited {
 
 .places-item {
   margin:0 0 20px 0;
+  cursor:pointer;
 }
 
 .places-item .pic {
@@ -2961,6 +3032,7 @@ a.place-presentation img {
 .block-calendar {
   height:742px;
   padding:10px 0;
+  margin:0 0 35px 0;
   background:url(images/block-calendar-bg.png) center 0 no-repeat;
 }
 
@@ -3065,6 +3137,10 @@ a.place-presentation img {
   margin: 0 0 24px 0;
   font-family: 'Ubuntu Condensed';
   letter-spacing: .04em;
+}
+
+.order-big-form textarea {
+  height:80px !important;
 }
 
 .order-big-form .button {
@@ -3611,3 +3687,79 @@ div.button-loading {
 .places-tabs .tabs-content {
   padding:22px 0 0 0;
 }
+
+#top-link{
+	cursor:pointer; /* изменяем указатель мыши при наведении на блок */
+	display:none; /* скрываем блок с кнопкой, т.к. отображать надо только при прокрутке */
+	position:fixed; /* фиксируем расположение */
+	left:0px;
+	top:0px;
+	padding:0;
+  z-index:5000;
+  width:68px;
+  background:url(images/up-link-tint.png);
+}
+#top-link a,
+#top-link a:hover,
+#top-link a:visited {
+	display:block; 
+  color:#8f6fd1;
+  font-family:'PT Sans';
+  font-size:14px;
+  text-decoration:none;
+  text-align:center;
+  padding:16px 0 0 0;
+  background:url(images/top-link-arrow.png) center 0 no-repeat;
+  width:100%;
+  position:absolute;
+  top:50%;
+  margin-top:-20px;
+}
+
+.top-link-hidden {
+  display:none !important;
+}
+
+.map-pan {
+  width:139px;
+  height:138px;
+  position:absolute;
+  left: 105px;
+  bottom: 16px;
+  background:url(images/map-pan-bg.png) 0 0 no-repeat;
+  z-index:2;
+}
+
+.map-pan .pan-button {
+  width:40px;
+  height:40px;
+  background-repeat:no-repeat;
+  background-position:0 0;
+  cursor:pointer;
+  position:absolute;
+}
+
+.map-pan .pan-left {
+  background-image:url(images/map-pan-l.png);
+  left: 8px;
+  top: 49px;
+}
+
+.map-pan .pan-right {
+  background-image:url(images/map-pan-r.png);
+  left: 92px;
+  top: 49px;
+}
+
+.map-pan .pan-down {
+  background-image:url(images/map-pan-d.png);
+  left: 49px;
+  top: 91px;
+}
+
+.map-pan .pan-up {
+  background-image:url(images/map-pan-u.png);
+  left: 49px;
+  top: 7px;
+}
+
