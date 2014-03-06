@@ -231,6 +231,7 @@ $(document).ready(function () {
       tabs.removeClass("act");
       $(this).addClass("act");
       
+      window.location.hash = $(this).attr("rel");
       tabContents.hide();
       
       tabContents.filter("[rel='"+$(this).attr("rel")+"']").fadeIn(250);
@@ -238,6 +239,10 @@ $(document).ready(function () {
     });
   
   });
+  
+  if (window.location.hash &&  $(".tab[rel='"+window.location.hash.replace("#","")+"']").length) {
+    $(".tab[rel='"+window.location.hash.replace("#","")+"']").click();
+  } 
   
 
   $("a.anchor-link").click(function() {
