@@ -1,0 +1,23 @@
+﻿.button,
+.callback-button,
+.main-menu,
+.breadcrumbs,
+.backlink,
+.block-calendar,
+.block-video,
+.block-wedding,
+.footer {
+  display:none;
+}
+
+.header-phone {
+  padding-top:70px;
+}
+
+.top-main {
+  padding-bottom:20px;
+}
+
+body {
+  width:1000px;
+}

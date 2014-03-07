@@ -3033,7 +3033,7 @@ a.place-presentation img {
   height:742px;
   padding:10px 0;
   margin:0 0 35px 0;
-  background:url(images/block-calendar-bg.png) center 0 no-repeat;
+  background:url(images/block-calendar-bg.png) center 0 repeat-x;
 }
 
 .calendar-wrapper {
