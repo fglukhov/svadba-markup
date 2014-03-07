@@ -16,8 +16,11 @@
           '<div class="map-balloon top">' +
               '<a class="close" href="#"></a>' +
               '<div class="map-balloon-inner fc">' +
-                  '<div class="pic"><img src="files/place-tmb-1.jpg"></div>' +
-                  '<div class="descr"><div class="cont"><a href="#">Большой зал торжеств в усадьбе Кузьминки, 150 м&sup2;</a></div></div>' +
+                  '<div class="pic"><a href="#"><img src="files/place-tmb-1.jpg"></a></div>' +
+                  '<div class="descr"><div class="cont">' +
+                  '<h4><a href="#">Большой зал торжеств в московской усадьбе купцов в Кузьминках, 150 м&sup2;</a></h4>' +
+                  '<span class="details">Аренда от 70 до 120 тыс. руб.<br />От 100 до 150 гостей</span>' +
+                  '</div></div>' +
               '</div>' +
           '</div>', {
           /**
@@ -134,8 +137,11 @@
           '<div class="map-balloon top">' +
               '<a class="close" href="#"></a>' +
               '<div class="map-balloon-inner fc">' +
-                  '<div class="pic"><img src="files/place-tmb-1.jpg"></div>' +
-                  '<div class="descr"><div class="cont"><a href="#">Самый лучший ресторан в мире с длинным названием, которое не влезает в балун, 1500 м&sup2;</a></div></div>' +
+                  '<div class="pic"><a href="#"><img src="files/place-tmb-1.jpg"></a></div>' +
+                  '<div class="descr"><div class="cont">' +
+                  '<h4><a href="#">Большой зал торжеств в Кузьминках, 150 м&sup2;</a></h4>' +
+                  '<span class="details">Аренда от 70 до 120 тыс. руб.<br />От 100 до 150 гостей</span>' +
+                  '</div></div>' +
               '</div>' +
           '</div>', {
           /**

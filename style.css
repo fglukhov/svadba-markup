@@ -2340,14 +2340,16 @@ a.button:visited {
 }
 
 .places-item .price {
-  font-size:18px;
-  line-height:20px;
-  font-family:'Ubuntu Condensed';
+  font-size:13px;
+  line-height:18px;
   color:#8f66e3;
-  margin:0 0 16px 0;
+  margin:10px 0 6px 0;
+  font-weight:600;
 }
 
 .places-item .text {
+  font-size:13px;
+  line-height:18px;
   margin:0 0 18px 0;
 }
 
@@ -2355,6 +2357,26 @@ a.button:visited {
 .places-item .text a:visited {
   color:#3d3d3d;
   text-decoration:none;
+}
+
+.place-pros {
+  padding: 0px 0 0 140px;
+  background: url(images/place-pros-bg.jpg) 0 0 no-repeat;
+  min-height: 108px;
+  margin: 37px 0 0 0;
+}
+
+.place-pros .ttl {
+  font-family: 'Ubuntu Condensed';
+  font-size: 20px;
+  color: #8f66e3;
+  padding: 13px 0 6px 0;
+  text-transform: uppercase;
+}
+
+.place-pros .text {
+  font-size:15px;
+  font-weight:600;
 }
 
 .place-specs {
@@ -3600,7 +3622,7 @@ div.button-loading {
 }
 
 .map-balloon .pic {
-  padding:18px 15px 0 18px;
+  padding:16px 15px 0 18px;
   float:left;
   width:80px;
 }
@@ -3614,21 +3636,27 @@ div.button-loading {
 }
 
 .map-balloon .descr {
-  padding: 20px 26px 0 0;
-  height: 75px;
-  width:241px;
-  float:left;
-  overflow:hidden;
+  padding: 3px 26px 0 0;
+  width: 241px;
+  float: left;
+  overflow: hidden;
+  line-height: 14px;
+}
+
+.map-balloon .descr h4 {
+  font-size: 17px;
+  line-height: 19px;
+  overflow: hidden;
+  max-height: 57px;
+  margin: 0 0 5px 0;
 }
 
 .map-balloon .descr a,
 .map-balloon .descr a:visited {
   font-family:'Ubuntu Condensed';
-  font-size:20px;
-  line-height:22px;
   text-decoration:none;
-  background:url(images/line-violet.png) 0 22px repeat-x;
-  color:#262626;
+  background:url(images/line-violet.png) 0 bottom repeat-x;
+  color:#8f66e3;
 }
 
 .map-balloon .descr a:hover {
@@ -3636,10 +3664,18 @@ div.button-loading {
 }
 
 .map-balloon .descr .cont {
-  height:60px;
-  vertical-align:middle;
-  display:table-cell;
-  overflow:hidden;
+  height: 108px;
+  vertical-align: middle;
+  display: table-cell;
+  overflow: hidden;
+}
+
+.map-balloon .descr .details {
+  color:#6b6b6b;
+  font-style:italic;
+  font-size:11px;
+  line-height:14px;
+  font-family:Arial;
 }
 
 .places-tabs {
