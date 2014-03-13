@@ -2994,16 +2994,19 @@ a.button:visited {
 .place-contacts {
   font-size:14px;
   line-height:20px;
+  margin:0 0 0 -10px;
 }
 
 .place-contacts td {
   vertical-align:top;
   padding:0 0 10px 0;
+  font-size:13px;
 }
 
 .place-contacts .name {
   color:#b0acb0;
   padding:0 12px 10px 0;
+  font-size:11px;
 }
 
 .place-info hr {
