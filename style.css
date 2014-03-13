@@ -1871,6 +1871,11 @@ a.button:visited {
   height:400px;
 }
 
+.wedding-item .wedding-gallery .big-pic {
+  height:300px;
+  overflow:hidden;
+}
+
 .wedding-item .wedding-descr {
   width:292px;
   height:400px;
