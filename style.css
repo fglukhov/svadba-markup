@@ -3007,6 +3007,7 @@ a.button:visited {
   color:#b0acb0;
   padding:0 12px 10px 0;
   font-size:11px;
+  white-space:nowrap;
 }
 
 .place-info hr {
