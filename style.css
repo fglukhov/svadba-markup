@@ -44,7 +44,6 @@ a:hover {
 ul,
 dl,
 .common-form,
-
 .form-item {
   zoom:1;
 }
@@ -52,7 +51,6 @@ dl,
 .fc:after,
 ul:after,
 dl:after,
-
 .common-form:after,
 .form-item:after {
   content:".";
@@ -3749,24 +3747,32 @@ div.button-loading {
 	top:0px;
 	padding:0;
   z-index:5000;
-  width:68px;
-  background:url(images/up-link-tint.png);
+  width:88px;
 }
+
+
+
 #top-link a,
 #top-link a:hover,
 #top-link a:visited {
-	display:block; 
-  color:#8f6fd1;
-  font-family:'PT Sans';
-  font-size:14px;
-  text-decoration:none;
-  text-align:center;
-  padding:16px 0 0 0;
-  background:url(images/top-link-arrow.png) center 0 no-repeat;
-  width:100%;
-  position:absolute;
-  top:50%;
-  margin-top:-20px;
+	display: block;
+  font-family: 'PT Sans';
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  padding: 29px 0 0 0;
+  background: #8f6fd1 url(images/top-link-arrow.png) center 12px no-repeat;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 68px;
+  height: 39px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  border-radius: 34px;
+  color: #fff;
+  margin: 0 0 0 10px;
 }
 
 .top-link-hidden {

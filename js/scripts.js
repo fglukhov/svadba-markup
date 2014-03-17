@@ -1090,16 +1090,11 @@ jQuery(function($){
 	$(window).resize(function(){
     topLink.css({'padding-bottom': $(window).height()});
 		topLink.toplinkwidth();
-    if($("body").width() < 1225) {
-			topLink.addClass("top-link-hidden");
-		} else {
-			topLink.removeClass("top-link-hidden");
-    }
 	});
 	$(window).scroll(function() {
-		if($(window).scrollTop() >= 1 && topLink.toplinkwidth() && $("body").width() > 1225) {
+		if($(window).scrollTop() >= 1 && topLink.toplinkwidth()) {
 			topLink.fadeIn(300);
-		} else if ($("body").width() > 1225) {
+		} else {
 			topLink.fadeOut(300);
 		}
 	});
