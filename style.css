@@ -4,7 +4,7 @@
   font-size:14px;
   line-height:20px;
   color:#3d3d3d;
-  min-width:1000px;
+  min-width:1100px;
   height:100%;
 }
 
@@ -44,7 +44,7 @@ a:hover {
 ul,
 dl,
 .common-form,
-.body,
+
 .form-item {
   zoom:1;
 }
@@ -52,7 +52,7 @@ dl,
 .fc:after,
 ul:after,
 dl:after,
-.body:after,
+
 .common-form:after,
 .form-item:after {
   content:".";
@@ -65,6 +65,10 @@ dl:after,
 a.button,
 a.button:visited {
   text-decoration:none;
+}
+
+.body {
+  overflow:hidden;
 }
 
 .button {
@@ -186,7 +190,7 @@ a.button:visited {
 
 .center-wrapper {
   width:980px;
-  padding:0 10px;
+  padding:0 60px;
   margin:0 auto;
 }
 
@@ -250,6 +254,7 @@ a.button:visited {
   box-shadow:0 7px 10px 0 rgba(0,0,0,.11);
   display:none;
   z-index:20;
+  overflow:hidden;
 }
 
 .logo-fixed {
@@ -3480,7 +3485,10 @@ a.place-presentation img {
   line-height:18px;
 }
 
-.top-wrap {min-height: 100%;}
+.top-wrap {
+  overflow:hidden;
+  min-height: 100%;
+}
 
 .top-main {
   overflow:auto;
