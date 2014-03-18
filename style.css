@@ -1675,6 +1675,14 @@ a.button:visited {
   margin:24px 0 8px 0;
 }
 
+.pup-tooltip h4.second_title {
+  font-size: 17px;
+  line-height: 18px;
+  color: #515151;
+  text-transform:none;
+  margin:-10px 0 12px 0;
+}
+
 .pup-tooltip-1 h3,
 .pup-tooltip-1 h4 {
   color:#8f66e3;
