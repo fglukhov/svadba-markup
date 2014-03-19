@@ -101,7 +101,7 @@
       
       <div class="main-slider">
         <div class="slides">
-          <div class="slide">
+          <div class="slide" onclick="location.href='http://ya.ru'">
             <div class="pic" style="background-image:url(files/slide-1.jpg)"></div>
             <div class="descr">
               <h3><span>Петровский путевой дворец</span></h3>
@@ -109,7 +109,7 @@
               <div class="price"><span>от <b>350 000</b> руб.</span></div>
             </div>
           </div>
-          <div class="slide">
+          <div class="slide" onclick="location.href='http://ya.ru'">
             <div class="pic" style="background-image:url(files/slide-2.jpg)"></div>
             <div class="descr">
               <h3><span>Усадба Кусково</span></h3>
@@ -117,7 +117,7 @@
               <div class="price"><span>от <b>50 000</b> руб.</span></div>
             </div>
           </div>
-          <div class="slide">
+          <div class="slide" onclick="location.href='http://ya.ru'">
             <div class="pic" style="background-image:url(files/slide-3.jpg)"></div>
             <div class="descr">
               <h3><span>Усадьба Архангельское</span></h3>
@@ -934,9 +934,18 @@
                 <label class="placeholder" for="order_23_phone">Телефон</label>
                 <input type="text" class="form-text form-phone" name="order_23_phone" id="order_23_phone" />
               </div>
-              <div class="form-item">
+              <div class="form-item errors-hidden">
                 <label class="placeholder" for="order_23_email">E-mail</label>
                 <input type="text" class="form-text form-email" name="order_23_email" id="order_23_email" />
+              </div>
+              <div class="form-item form-select-item">
+                <select class="hide-ttl" name="order_23_guests" id="order_23_guests" required>
+                  <option value="">Кол-во гостей</option>
+                  <option value="1">10-50</option>
+                  <option value="2">51-100</option>
+                  <option value="3">101-150</option>
+                  <option value="4">более 150</option>
+                </select>
               </div>
             </div>
             <div class="form-item errors-left">

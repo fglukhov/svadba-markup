@@ -595,6 +595,7 @@ jQuery.extend(jQuery.validator.messages, {
     var listerDescr = slider.find(".lister-descr");
     
     listerDescr.html(slides.eq(0).find(".descr").html());
+    listerDescr.attr("onclick",slides.eq(0).attr("onclick"))
     
     if (sliderSize > 1) {
     
@@ -624,6 +625,7 @@ jQuery.extend(jQuery.validator.messages, {
         }
         slides.eq(curIndex).fadeIn(500).addClass("slide-act");
         listerDescr.html(slides.eq(curIndex).find(".descr").html());
+        listerDescr.attr("onclick",slides.eq(curIndex).attr("onclick"))
         listerDescr.hide().fadeIn(250);
       });
       
@@ -637,6 +639,7 @@ jQuery.extend(jQuery.validator.messages, {
         }
         slides.eq(curIndex).fadeIn(500).addClass("slide-act");
         listerDescr.html(slides.eq(curIndex).find(".descr").html());
+        listerDescr.attr("onclick",slides.eq(curIndex).attr("onclick"))
         listerDescr.hide().fadeIn(250);
       });
       

@@ -420,6 +420,7 @@ a.button:visited {
   height:440px;
   background:#fff;
   overflow:hidden;
+  cursor:pointer;
 }
 
 .main-slider .slide {
@@ -464,8 +465,7 @@ a.button:visited {
 }
 
 .main-slider .lister .lister-cont {
-  padding:20px 0 20px 0;
-  min-height:103px;
+  min-height:143px;
   margin:0 0;
   background:url(images/main-slider-descr-top.png) 0 0 no-repeat;
   font-size:14px;
@@ -474,7 +474,8 @@ a.button:visited {
 }
 
 .main-slider .lister .lister-descr {
-  padding:0 40px;
+  padding:20px 40px 20px 40px;
+  cursor:pointer;
 }
 
 .main-slider .lister h3 {
@@ -1030,6 +1031,10 @@ a.button:visited {
   left: auto;
   margin-right: 5px;
   margin-left: 0;
+}
+
+.common-form .errors-hidden .error-wrapper {
+  display:none !important;
 }
 
 .common-form label.error {
@@ -1752,6 +1757,10 @@ a.button:visited {
   width:218px;
 }
 
+.popup .form-select-item {
+  width:150px !important;
+}
+
 .order-form-2 .form-row .form-item {
   float:left;
   width:auto;
@@ -1777,7 +1786,7 @@ a.button:visited {
 }
 
 .order-popup {
-  width:548px;
+  width:648px;
 }
 
 .tint {
@@ -1826,11 +1835,11 @@ a.button:visited {
 
 .popup .form-row .form-item {
   margin:0 10px 10px 0;
-  width:225px;
+  width:195px;
 }
 
 .popup .form-row .form-text {
-  width:225px;
+  width:195px;
 }
 
 .callback-popup {
@@ -2049,6 +2058,18 @@ a.button:visited {
 
 .block-order-2 {
   margin:0 0 38px 0;
+}
+
+.block-order-2 .order-form {
+  padding:31px 44px 0 44px;
+}
+
+.block-order-2 h3 {
+  margin:0 0 9px 0;
+}
+
+.block-order-2 h3 div {
+  margin:-3px 0 0 0;
 }
 
 .social-l-col {
